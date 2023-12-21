@@ -1,0 +1,47 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #FF4500;
+
+}
+
+.container {
+    background-color: whitesmoke;
+    font-size: 1rem;
+    padding: 3em 2.8em;
+    width: 90vw;
+    max-width: 32em;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    top: 1em;
+    border-radius: 0.6em;
+    box-shadow: 0 1.2em 2.5em rgba(43, 35, 0, 0.2);
+
+}
+
+.search-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.2em;
+}
+
+#user-inp {
+    font-size: 1rem;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+
+
+}
+
+#search-btn {
+    font-size: 1rem;
+    background-color: #FF4500;
+    font-weight: 400;
+
+}
