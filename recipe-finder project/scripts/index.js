@@ -75,6 +75,7 @@ searchBtn.addEventListener('click', () => {
     }
 });
 
+//original
 fetch(url + "big mac")
     .then((response) => response.json())
     .then(data => {
@@ -112,6 +113,7 @@ fetch(url + "big mac")
         </div>
         <button id="show-recipe">View Recipe<button>
        `;
+        //showing the instructions and hiding
         let ingredientCon = document.getElementById("ingredient-con");
         let parent = document.createElement("ul");
         let recipe = document.getElementById("recipe");
@@ -126,7 +128,7 @@ fetch(url + "big mac")
 
         ingredientCon.appendChild(parent);
 
-
+        //buttons
         hideRecipe.addEventListener('click', () => {
             recipe.style.display = 'none';
         })
