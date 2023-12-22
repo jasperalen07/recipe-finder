@@ -11,6 +11,7 @@ searchBtn.addEventListener('click', () => {
         result.innerHTML = `<h3>Input Field Cannot be Empty</h3>`
     } else {
         fetch(url + userInp)
+
             .then((response) => response.json())
             .then(data => {
                 console.log(data)
