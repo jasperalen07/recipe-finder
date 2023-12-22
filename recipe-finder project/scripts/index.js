@@ -45,7 +45,7 @@ searchBtn.addEventListener('click', () => {
             <button id="hide-recipe">X</button>
             <pre id="instructions">${myMeal.strInstructions}</pre>
         </div>
-        <button id="show-recipe">View Recipe<button>
+        <button id="show-recipe">View Recipe</button>
        `;
                 let ingredientCon = document.getElementById("ingredient-con");
                 let parent = document.createElement("ul");
@@ -57,11 +57,9 @@ searchBtn.addEventListener('click', () => {
                     let child = document.createElement("li");
                     child.innerText = i;
                     parent.appendChild(child);
-                    ingredientCon.appendChild(parent);
-
                 })
 
-
+                ingredientCon.appendChild(parent);
 
                 hideRecipe.addEventListener('click', () => {
                     recipe.style.display = 'none';
@@ -123,10 +121,9 @@ fetch(url + "big mac")
             let child = document.createElement("li");
             child.innerText = i;
             parent.appendChild(child);
-            ingredientCon.appendChild(parent);
-
         })
 
+        ingredientCon.appendChild(parent);
 
 
         hideRecipe.addEventListener('click', () => {
@@ -136,5 +133,8 @@ fetch(url + "big mac")
         showRecipe.addEventListener('click', () => {
             recipe.style.display = 'block';
         })
+            .catch(() => {
+                result.innerHTML = `<h3>Invalid Input</h3>`;
+            })
     });
 
